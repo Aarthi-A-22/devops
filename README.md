@@ -1,17 +1,29 @@
-import java.util.Scanner;
+# 🚗 Vehicle Service Booking System
 
-public class LargestOfThree {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter 3 numbers: ");
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
+This is a simple backend project that demonstrates a *Vehicle Service Booking API* built with *Java, managed using **Maven, containerized using **Docker, and deployed automatically to a remote server using **Ansible*.
 
-        int max = a;
-        if (b > max) max = b;
-        if (c > max) max = c;
+---
 
-        System.out.println("Largest number is: " + max);
-    }
-}
+## 📦 Tech Stack
+
+- *Java 11*
+- *Maven* – for build management
+- *Docker* – for containerizing the application
+- *Ansible* – for remote deployment automation
+- *Linux (Ubuntu)* – on the target VM (e.g., Azure)
+
+---
+
+## ✅ Features
+
+- Simple Java application with service booking logic
+- Dockerized application for easy deployment
+- Ansible playbook to:
+  - Install Docker on the server
+  - Transfer project files
+  - Build Docker image on the remote server
+  - Run the container and expose the service
+
+---
+
+## 📁 Project Structure
