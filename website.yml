@@ -1,0 +1,21 @@
+---
+- name: Configure Web Server Infrastructure
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Install Nginx web server
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Copy website files to the server
+      copy:
+        src: ./website/
+        dest: /var/www/html/
+
+    - name: Ensure Nginx is started and enabled on boot
+      service:
+        name: nginx
+        state: started
+        enabled: yes
